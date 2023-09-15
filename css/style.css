@@ -1,0 +1,221 @@
+/* Start Variables */
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-fraunces: 'Fraunces', serif;
+    --very-dark-blue: hsl(212, 21%, 14%);
+}
+
+/* End Variables */
+
+/* Start Global Rules */
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    font-family: var(--font-montserrat);
+}
+
+/* End Global Rules */
+
+.card {
+    margin: 250px auto 30px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+
+@media (max-width:375px) {
+    .card {
+        margin: 100px auto 30px;
+        flex-direction: column;
+        width: 340px;
+        height: 630px;
+    }
+}
+
+@media (max-width:375px) {
+    .card .image .desk-img {
+        display: none;
+    }
+}
+
+@media (min-width:376px) {
+    .card .image .mob-img {
+        display: none;
+    }
+}
+
+.card .image img {
+    border-radius: 10px 0 0 10px;
+    width: 300px;
+    height: 100%;
+}
+
+@media (max-width:375px) {
+    .card .image img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+}
+
+@media (min-width:376px) {
+    .card .image img {
+        width: 300px;
+    }
+}
+
+.card .text {
+    margin: 27px;
+}
+
+@media (min-width:376px) {
+    .card .text {
+        margin: 30px;
+        width: 200px;
+    }
+}
+
+.card .text .title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    color: var(--dark-grayish-blue);
+}
+
+.card .text h3 {
+    width: 100%;
+    margin: 0;
+    font-size: 32px;
+    font-family: var(--font-fraunces);
+    font-weight: 700;
+    color: var(--very-dark-blue);
+    line-height: 1;
+    padding-top: 15px;
+    padding-left: 1px;
+}
+
+.card .text p {
+    width: 295px;
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    padding-top: 5px;
+    padding-left: 1px;
+    line-height: 1.5;
+}
+
+@media (min-width:376px) {
+    .card .text p {
+        width: 230px;
+    }
+}
+
+.card .text .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 25px;
+}
+
+@media (max-width:375px) {
+    .card .text .price {
+        width: 200px;
+    }
+}
+
+.card .text .price .old {
+    padding-right: 5px;
+    font-size: 14px;
+    text-decoration: line-through;
+    color: var(--dark-grayish-blue);
+}
+
+.card .text .price .new {
+    font-size: 32px;
+    font-family: var(--font-fraunces);
+    color: var(--dark-cyan);
+}
+
+.card .text .btn {
+    background-color: var(--dark-cyan);
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    height: 15%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .text .btn:hover {
+    background-color: #1c4031;
+    cursor: pointer;
+}
+
+@media (min-width:376px) {
+    .card .text .btn {
+        width: calc(100% + 40px);
+        height: 12%;
+    }
+}
+
+.card .text .btn div {
+    font-family: var(--font-montserrat);
+}
+
+/* These two Media Queries are equal to the above queries and do same thing but these are merged in one place */
+
+/* @media (max-width:375px) {
+    .card {
+        flex-direction: column;
+        width: 340px;
+        height: 630px;
+    }
+
+    .card .image .desk-img {
+        display: none;
+    }
+
+    .card .image img {
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+
+    .card .text .price {
+        width: 200px;
+    }
+} */
+
+/* @media (min-width:376px) {
+    .card .image .mob-img {
+        display: none;
+    }
+
+    .card .image img {
+        width: 300px;
+    }
+
+    .card .text {
+        margin: 30px;
+        width: 200px;
+    }
+
+    .card .text p {
+        width: 230px;
+    }
+
+    .card .text .btn {
+        width: calc(100% + 40px);
+        height: 12%;
+    }
+} */
